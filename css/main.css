@@ -17,7 +17,12 @@ p a {
   /* text-decoration: underline */
   color: #008AFF;
 }
-h1,h2,h3,h4,h5,h6 {
+h1 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: rgb(42, 161, 152);
+}
+h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
@@ -97,7 +102,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
+  /* background: #F5F5F5; */
+  background: #2aa198;
   border-bottom: 1px solid #EAEAEA;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -458,6 +464,7 @@ footer .theme-by {
 .intro-header .page-heading h1 {
   margin-top: 0;
   font-size: 50px;
+  font-family: 'Hack-Regular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .intro-header .post-heading h1 {
   margin-top: 0;
@@ -468,11 +475,14 @@ footer .theme-by {
   font-size: 27px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 10px 0 0;
 }
+.intro-header .page-heading .page-subheading {
+  font-family: 'Hack-Regular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 .intro-header .post-heading .post-subheading {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: 20px;
 }
 .intro-header.big-img .page-heading .page-subheading,
@@ -680,3 +690,10 @@ td.gutter {
 #social-share-section {
   margin-bottom: 30px;
 }
+
+/* --- font --- */
+@font-face {
+  font-family: 'Hack-Regular';
+  src: url('../fonts/Hack-Regular.otf') format('opentype');
+}
+'

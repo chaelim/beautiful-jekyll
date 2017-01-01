@@ -207,7 +207,10 @@ Beautiful Jekyll is meant to be so simple to use that you can do it all within t
 3. Inside your repository folder, run:
 
     ```
-    docker run -p 4000:4000 -v `pwd`:/app mangar/jekyll:1.1 bash -c "bundle install; bundle exec jekyll serve"
+    docker run -p 4000:4000 -v `pwd`:/app mangar/jekyll:1.1 bash -c "bundle install; bundle exec jekyll serve --host 0.0.0.0"
+
+    [Run interactively]
+    docker run -it --rm -p 4000:4000 -v `pwd`:/app mangar/jekyll:1.1 bash -c "bundle install; bundle exec jekyll serve --host 0.0.0.0"
     ```
 4. View your website at <http://localhost:4000>.
 
