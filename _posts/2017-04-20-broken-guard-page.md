@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Broken Stack Guard Page
-tags: [blog]
+tags: [cpp, debugging]
 ---
 
 This week, I updated my [Broken Guard Page](https://github.com/chaelim/BrokenGuardPage) project that includes couple of demo programs. Last demo shows how a malicious program can cause very obscure access violation of other process by just **reading** the memory of the other process. This is one of the examples that how modern software can be fragile and it can affect software reliability.
 
-Most modern programming languages has `function` and if you're C/C++ programmer, probably already know the different between local variable and dynamically allocated memory.
+Most modern programming languages has `function` and if you're C/C++ programmer, probably already know the different between local variable and dynamically allocated or known as heap memory.
 
 Local variable is usually allocated on thread stack and dynamic allocation uses heap memory. 
 
-In terms of performance, [stack is faster](http://stackoverflow.com/questions/161053/which-is-faster-stack-allocation-or-heap-allocation). It's because not only stack alloc and dealloc operations are faster than heap but also stack allocated memory is CPU cache friendly which means much faster data access.
+In terms of performance, [stack is faster](http://stackoverflow.com/questions/161053/which-is-faster-stack-allocation-or-heap-allocation). It's because not only stack alloc and dealloc operations are faster than heap but also stack allocated memory is CPU cache friendly which means the data more likely in the CPU cache and provide much [faster data access](https://gist.github.com/jboner/2841832).
  
 Then why don't we use stack allocated variables whenever possible? It's answered here:  [Why is the use of alloca() not considered good practice?](http://stackoverflow.com/questions/1018853/why-is-the-use-of-alloca-not-considered-good-practice) [_alloca](https://msdn.microsoft.com/en-us/library/wb1s57t5.aspx) even accepts size param at run-time. (That's so convenient and also can easily be misused)
 
