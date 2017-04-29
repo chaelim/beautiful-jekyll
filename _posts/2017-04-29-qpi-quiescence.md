@@ -1,7 +1,7 @@
 ---
 layout: post
 title: QPI Quiescence
-tags: [cpp, debugging]
+tags: [cpu, lock-free]
 ---
 
 This is sort of note to myself. Here is good article on [QPI Quiescence](https://blogs.oracle.com/dave/qpi-quiescence) from Dave Dice. Again this makes me feel multi-processor or multi-core CPU like a networked system. See [this article](http://queue.acm.org/detail.cfm?id=2492433). Also the article mentioned Atomic [CAS](https://en.wikipedia.org/wiki/Compare-and-swap) is more than 3 times expensive than regular CAS.
