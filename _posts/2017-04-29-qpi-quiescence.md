@@ -11,7 +11,7 @@ This is sort of note to myself. Here is a good article that I found while ago [Q
 > take effect in their real-time order.”
 > (Herlihy/Shavit 2008)
 
-**QPI Quiescence** is interesting way to create asymmetric synchronization which is basically optimization for hot-path thread. Idea is eliminating any __#LOCK__ signal from fast-path thread as possible. And the slow-path thread still can use __#LOCK__ signal and create **QPI Quiescence**.
+**QPI Quiescence** is interesting way to create asymmetric synchronization which is basically optimization for fast-path thread. Idea is eliminating any __#LOCK__ signal from fast-path thread as possible. And the slow-path thread still can use __#LOCK__ signal and also creates **QPI Quiescence**.
 
 Windows provides [FlushProcessWriteBuffers](https://msdn.microsoft.com/en-us/library/windows/desktop/ms683148(v=vs.85).aspx) API which is in fact a mechanism to create **Quiescent Consistency** in muti-processor system. It also recognizes process CPU affinity.
 > Flushes the write queue of each processor that is running a thread of the current process.
